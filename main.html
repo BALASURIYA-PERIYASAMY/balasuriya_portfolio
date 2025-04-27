@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balasuriya -Portfolio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#6366f1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+}
+.masonry-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+grid-auto-rows: 10px;
+grid-gap: 20px;
+}
+.masonry-item {
+grid-row-end: span var(--span);
+}
+.theme-toggle:checked + .toggle-bg {
+background-color: #3b82f6;
+}
+.theme-toggle:checked + .toggle-bg .toggle-circle {
+transform: translateX(1.5rem);
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #3b82f6;
+}
+</style>
+</head>
+<body class="bg-white text-gray-800">
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white/95 shadow-sm z-50 backdrop-blur-sm">
+<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">Balasuriya</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#" class="font-medium hover:text-primary transition-colors">Home</a>
+<a href="#portfolio" class="font-medium hover:text-primary transition-colors">Porfile</a>
+<a href="#skills" class="font-medium hover:text-primary transition-colors">Skills</a>
+<a href="#about" class="font-medium hover:text-primary transition-colors">About</a>
+<a href="#contact" class="font-medium hover:text-primary transition-colors">Contact</a>
+<!-- Theme Toggle -->
+<div class="flex items-center">
+<input type="checkbox" id="theme-toggle" class="theme-toggle hidden">
+<label for="theme-toggle" class="flex items-center cursor-pointer">
+<div class="relative w-12 h-6 bg-gray-200 rounded-full toggle-bg transition-colors duration-300">
+<div class="absolute left-0.5 top-0.5 bg-white w-5 h-5 rounded-full toggle-circle transition-transform duration-300 flex items-center justify-center">
+<i class="ri-sun-line text-yellow-500 text-xs"></i>
+</div>
+</div>
+</label>
+</div>
+</nav>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="#portfolio" class="py-2 font-medium hover:text-primary transition-colors">Portfolio</a>
+<a href="#about" class="py-2 font-medium hover:text-primary transition-colors">About</a>
+<a href="#contact" class="py-2 font-medium hover:text-primary transition-colors">Contact</a>
+<!-- Mobile Theme Toggle -->
+<div class="flex items-center py-2">
+<span class="mr-3 text-sm">Theme:</span>
+<input type="checkbox" id="mobile-theme-toggle" class="theme-toggle hidden">
+<label for="mobile-theme-toggle" class="flex items-center cursor-pointer">
+<div class="relative w-12 h-6 bg-gray-200 rounded-full toggle-bg transition-colors duration-300">
+<div class="absolute left-0.5 top-0.5 bg-white w-5 h-5 rounded-full toggle-circle transition-transform duration-300 flex items-center justify-center">
+<i class="ri-sun-line text-yellow-500 text-xs"></i>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="pt-28 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-blue-50 to-indigo-50" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20abstract%20gradient%20background%20with%20soft%20blue%20and%20purple%20tones%2C%20minimalist%20design%20with%20geometric%20shapes%2C%20perfect%20for%20a%20creative%20developer%20portfolio%20hero%20section%2C%20professional%20and%20clean%20look%2C%20high%20quality%20digital%20art&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 mb-10 md:mb-0">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        Balasuriya Periyasamy
+      </h1>
+      <div class="border-t-2 border-secondary my-4"></div>
+      <h1 class="text-primary text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-6">Full stack web developer</h1>
+      
+<p class="text-lg md:text-xl text-600 mb-8 max-w-lg">
+I design and develop engaging digital experiences that captivate users and drive meaningful results. I specialize in front-end and backend development and creating intuitive, user-centered web pages.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+    <a href="#portfolio" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-blue-600 transition whitespace-nowrap">View My Work</a>
+    <a href="#contact" class="border-2 border-gray-800 text-gray-800 px-8 py-3 !rounded-button font-medium hover:bg-gray-800 hover:text-white transition whitespace-nowrap">Get In Touch</a>
+</div>
+</div>
+<div class="md:w-1/2 relative">
+<div class="relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl">
+<img src="./images/prince.JPG" alt="Balasuriya" class="w-full h-full object-cover object-top">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-16 md:py-24">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">My Profile</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Explore my projects that showcase my skills in design, development, and creative problem-solving.</p>
+</div>
+<!-- Portfolio Filters -->
+<div class="flex flex-wrap justify-center gap-2 mb-10">
+<button class="portfolio-filter px-4 py-2 bg-primary text-white rounded-full text-sm font-medium whitespace-nowrap !rounded-button" data-filter="all">All Projects</button>
+<button class="portfolio-filter px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium whitespace-nowrap !rounded-button" data-filter="web">Web Design</button>
+<button class="portfolio-filter px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium whitespace-nowrap !rounded-button" data-filter="app">App Development</button>
+<button class="portfolio-filter px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium whitespace-nowrap !rounded-button" data-filter="branding">Software Development</button>
+<button class="portfolio-filter px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium whitespace-nowrap !rounded-button" data-filter="ui">UI/UX</button>
+</div>
+<!-- Portfolio Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Project 1 -->
+<div class="portfolio-item group" data-category="web">
+<div class="relative overflow-hidden rounded-lg shadow-md">
+<img src="https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20design%20with%20clean%20interface%2C%20product%20display%20page%20with%20minimalist%20aesthetic%2C%20professional%20web%20design%20showcase%2C%20high%20resolution%20screenshot%20on%20desktop%20monitor&width=800&height=600&seq=2&orientation=landscape" alt="E-commerce Website" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold">E-commerce Platform</h3>
+<p class="text-gray-200 mt-2">Web Design / Development</p>
+<a href="#" class="mt-4 inline-flex items-center text-white font-medium">
+View Project <i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="portfolio-item group" data-category="app">
+<div class="relative overflow-hidden rounded-lg shadow-md">
+<img src="https://readdy.ai/api/search-image?query=fitness%20mobile%20app%20interface%20design%20with%20workout%20tracking%20features%2C%20clean%20modern%20UI%20with%20blue%20accent%20colors%2C%20multiple%20screens%20displayed%20on%20smartphone%20mockup%2C%20professional%20app%20design&width=800&height=600&seq=3&orientation=landscape" alt="Fitness App" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold">Transport Management System</h3>
+<p class="text-gray-200 mt-2">App Development / UI Design</p>
+<a href="#" class="mt-4 inline-flex items-center text-white font-medium">
+View Project <i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 3
+<div class="portfolio-item group" data-category="branding">
+<div class="relative overflow-hidden rounded-lg shadow-md">
+<img src="https://readdy.ai/api/search-image?query=brand%20identity%20design%20for%20coffee%20shop%20with%20logo%2C%20business%20cards%2C%20packaging%2C%20and%20signage%20displayed%20on%20wooden%20table%2C%20professional%20branding%20photography%20with%20soft%20natural%20lighting&width=800&height=600&seq=4&orientation=landscape" alt="Coffee Shop Branding" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold">Artisan Coffee Branding</h3>
+<p class="text-gray-200 mt-2">Branding / Logo Design</p>
+<a href="#" class="mt-4 inline-flex items-center text-white font-medium">
+View Project <i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+ -->
+<!-- Project 4 -->
+<div class="portfolio-item group" data-category="ui">
+<div class="relative overflow-hidden rounded-lg shadow-md">
+<img src="https://readdy.ai/api/search-image?query=dashboard%20UI%20design%20for%20analytics%20platform%20with%20data%20visualization%2C%20charts%2C%20graphs%2C%20clean%20modern%20interface%20with%20dark%20theme%2C%20professional%20UI%20design%20mockup&width=800&height=600&seq=5&orientation=landscape" alt="Dashboard UI" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold">Varstrem New programming language</h3>
+<p class="text-gray-200 mt-2">Software development</p>
+<a href="#" class="mt-4 inline-flex items-center text-white font-medium">
+View Project <i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="portfolio-item group" data-category="web">
+<div class="relative overflow-hidden rounded-lg shadow-md">
+<img src="https://readdy.ai/api/search-image?query=travel%20blog%20website%20design%20with%20large%20hero%20image%2C%20clean%20typography%2C%20article%20layout%2C%20responsive%20design%20shown%20on%20multiple%20devices%2C%20professional%20web%20design%20showcase&width=800&height=600&seq=6&orientation=landscape" alt="Travel Blog" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold">Catle form management System</h3>
+<p class="text-gray-200 mt-2">Software Development</p>
+<a href="#" class="mt-4 inline-flex items-center text-white font-medium">
+View Project <i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="portfolio-item group" data-category="app">
+<div class="relative overflow-hidden rounded-lg shadow-md">
+<img src="https://readdy.ai/api/search-image?query=finance%20management%20app%20interface%20design%20with%20budget%20tracking%20features%2C%20transaction%20history%2C%20expense%20analytics%2C%20clean%20modern%20UI%20with%20dark%20blue%20accent%20colors%2C%20professional%20app%20design%20mockup&width=800&height=600&seq=7&orientation=landscape" alt="Finance App" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold">Remainder App</h3>
+<p class="text-gray-200 mt-2">App Development / UI Design</p>
+<a href="#" class="mt-4 inline-flex items-center text-white font-medium">
+View Project <i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="px-6 py-3 bg-white text-primary border border-primary font-medium rounded-button hover:bg-blue-50 transition-all whitespace-nowrap">
+View All Projects
+</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-8 md:py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-2/5">
+          <div class="relative">
+            <div class="w-full h-96 rounded-lg overflow-hidden shadow-xl">
+              <img src="./images/prince2.JPG">
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+              <p class="text-sm font-medium">Experience</p>
+              <p class="text-3xl font-bold text-primary">Initiates</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-3/5">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+          <p class="text-gray-600 mb-6">
+            I'm Balasuriya, a passionate Web and App Developer dedicated to crafting digital solutions that blend aesthetic appeal with functional excellence. My journey into the software world began with a deep fascination for how programming and technology converge to create exceptional websites, software, and applications.
+          </p>
+          <p class="text-gray-600 mb-8">
+            As a passionate fresher, I specialize in creating responsive websites, user-friendly mobile applications, and building brand identities that help businesses connect with their audiences. With a strong foundation in strategic thinking and creative problem-solving, I am eager to deliver solutions that meet and exceed expectations as I grow and learn in the industry.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="./resumes/princeresume.pdf" class="px-6 py-3 bg-primary text-white font-medium rounded-button shadow-md hover:shadow-lg transition-all whitespace-nowrap flex items-center">
+              <i class="ri-download-line mr-2"></i> Download Resume
+            </a>
+            <a href="#contact" class="px-6 py-3 bg-white text-primary border border-primary font-medium rounded-button hover:bg-blue-50 transition-all whitespace-nowrap">
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SKILLS -->
+  <section id="skills" class="py-8 md:py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-semibold text-center mb-8">My Skills</h3>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+  
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-code-s-slash-line"></i>
+            </div>
+            <span class="font-medium">Frontend Development</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full transition-all duration-1000 progress-bar" data-width="85%"></div>
+          </div>
+        </div>
+  
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-database-2-line"></i>
+            </div>
+            <span class="font-medium">Backend Development</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full transition-all duration-1000 progress-bar" data-width="75%"></div>
+          </div>
+        </div>
+  
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-layout-line"></i>
+            </div>
+            <span class="font-medium">App Development</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full transition-all duration-1000 progress-bar" data-width="80%"></div>
+          </div>
+        </div>
+  
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-smartphone-line"></i>
+            </div>
+            <span class="font-medium">Data Analytics</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full transition-all duration-1000 progress-bar" data-width="70%"></div>
+          </div>
+        </div>
+  
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-paint-brush-line"></i>
+            </div>
+            <span class="font-medium">Digital Marketing</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full transition-all duration-1000 progress-bar" data-width="70%"></div>
+          </div>
+        </div>
+  
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-group-line"></i>
+            </div>
+            <span class="font-medium">Teamwork</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full transition-all duration-1000 progress-bar" data-width="85%"></div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <!-- JavaScript for Animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const progress = entry.target;
+            const targetWidth = progress.getAttribute('data-width');
+            progress.style.width = targetWidth;
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+  
+      document.querySelectorAll('.progress-bar').forEach(bar => {
+        observer.observe(bar);
+      });
+    });
+  </script>
+  
+  
+<!-- PROGRAMMING SKILLS -->
+<section id="skills" class="py-8 md:py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-semibold text-center mb-8">My Programming and Tools Skills</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+        
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-html5-line"></i>
+            </div>
+            <span class="font-medium">HTML</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 96%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-css3-line"></i>
+            </div>
+            <span class="font-medium">CSS</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-javascript-line"></i>
+            </div>
+            <span class="font-medium">JavaScript</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-reactjs-line"></i>
+            </div>
+            <span class="font-medium">React</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-code-box-line"></i>
+            </div>
+            <span class="font-medium">PHP</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-database-2-line"></i>
+            </div>
+            <span class="font-medium">MongoDB</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+  
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-database-line"></i>
+            </div>
+            <span class="font-medium">XAMPP</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+          </div>
+        </div>
+  
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-customer-service-2-line"></i>
+            </div>
+            <span class="font-medium">C Programming</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+          </div>
+        </div>
+  
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-python-line"></i>
+            </div>
+            <span class="font-medium">Python</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+          </div>
+        </div>
+  
+        <div class="skill-item">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-2">
+              <i class="ri-java-line"></i>
+            </div>
+            <span class="font-medium">Java</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!--
+<section id="Experience" class="py-16 md:py-24 bg-gray-50">
+<div class="mt-20">
+<h3 class="text-2xl font-bold mb-8 text-center">Work Experience</h3>
+<div class="relative">
+
+    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
+
+<div class="timeline-container">
+
+<div class="relative mb-16">
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+<h4 class="text-xl font-semibold">Senior UI/UX Designer</h4>
+<p class="text-primary font-medium">TechVision Inc.</p>
+<p class="text-gray-500">2022 - Present</p>
+<p class="text-gray-600 mt-2">
+Leading the design team in creating intuitive and engaging user interfaces for enterprise software solutions. Collaborating with developers and product managers to deliver exceptional user experiences.
+</p>
+</div>
+<div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center z-10">
+<i class="ri-briefcase-line text-white"></i>
+</div>
+<div class="md:w-1/2 md:pl-12"></div>
+</div>
+</div>
+
+<div class="relative mb-16">
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right order-1 md:order-none"></div>
+<div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center z-10">
+<i class="ri-briefcase-line text-white"></i>
+</div>
+<div class="md:w-1/2 md:pl-12 order-2 md:order-none">
+<h4 class="text-xl font-semibold">Frontend Developer</h4>
+<p class="text-primary font-medium">Digital Craft Studio</p>
+<p class="text-gray-500">2019 - 2022</p>
+<p class="text-gray-600 mt-2">
+Developed responsive websites and web applications for clients across various industries. Implemented modern frontend technologies and frameworks to create seamless user experiences.
+</p>
+</div>
+</div>
+</div>
+
+<div class="relative mb-16">
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+<h4 class="text-xl font-semibold">UI Designer</h4>
+<p class="text-primary font-medium">CreativeHub Agency</p>
+<p class="text-gray-500">2017 - 2019</p>
+<p class="text-gray-600 mt-2">
+Designed user interfaces for websites, mobile apps, and digital products. Collaborated with cross-functional teams to ensure design consistency and usability across all platforms.
+</p>
+</div>
+<div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center z-10">
+<i class="ri-briefcase-line text-white"></i>
+</div>
+<div class="md:w-1/2 md:pl-12"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+-->
+
+<!-- Contact Section -->
+<section id="contact" class="py-8 md:py-16">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Have an idea in mind or interested in collaborating? I’d love to hear from you. Let’s connect and create something exceptional together.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-12">
+<div class="md:w-1/2">
+<form id="contact-form" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+<input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20" placeholder="Your name" required>
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20" placeholder="Your email" required>
+</div>
+</div>
+<div>
+<label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+<input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20" placeholder="Subject">
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+<textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20" placeholder="Your message" required></textarea>
+</div>
+<button type="submit" id="submit-button" class="px-6 py-3 bg-primary text-white font-medium rounded-button shadow-md hover:shadow-lg transition-all whitespace-nowrap w-full md:w-auto">
+<span id="button-text">Send Message</span>
+<span id="button-loading" class="hidden">
+<svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+Sending...
+</span>
+</button>
+</form>
+</div>
+<div class="md:w-1/2">
+<div class="bg-gray-50 p-8 rounded-lg h-full">
+<h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4">
+<i class="ri-map-pin-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Location</h4>
+<p class="text-gray-600 mt-1">Namakkal, Tamilnadu, India</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4">
+<i class="ri-mail-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Email</h4>
+<p class="text-gray-600 mt-1">balasuriyaperiyasamy@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4">
+<i class="ri-phone-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Phone</h4>
+<p class="text-gray-600 mt-1">+=91 6374888248</p>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<h4 class="font-medium text-gray-900 mb-4">Follow Me</h4>
+<div class="flex space-x-4">
+
+<a href="https://www.linkedin.com/in/balasuriya-p-5bb0b92a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white rounded-full transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+
+<a href="https://www.instagram.com/itz_me_prince_bala?igsh=N2xpdHJuMzVjb3Ny" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white rounded-full transition-colors">
+    <i class="ri-instagram-line"></i>
+    </a>
+
+<a href="https://www.facebook.com/share/16Rk6mxJTn/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white rounded-full transition-colors">
+    <i class="ri-facebook-fill"></i>
+</a>
+
+<a href="https://github.com/BALASURIYA-PERIYASAMY" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white rounded-full transition-colors">
+<i class="ri-github-fill"></i>
+</a>
+<!-- 
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white rounded-full transition-colors">
+<i class="ri-behance-fill"></i>
+</a>
+-->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between items-center mb-8">
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-6 md:mb-0">Balasuriya</a>
+<div class="flex flex-wrap justify-center gap-6">
+<a href="#" class="hover:text-primary transition-colors">Home</a>
+<a href="#portfolio" class="hover:text-primary transition-colors">Profile</a>
+<a href="#about" class="hover:text-primary transition-colors">About</a>
+<a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+<a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+<a href="#" class="hover:text-primary transition-colors">Blog</a>
+</div>
+<div class="hidden md:flex space-x-4 mt-6 md:mt-0">
+    <a href="https://www.linkedin.com/in/balasuriya-p-5bb0b92a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+        <i class="ri-linkedin-fill"></i>
+        </a>
+        
+        <a href="https://www.instagram.com/itz_me_prince_bala?igsh=N2xpdHJuMzVjb3Ny" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+            <i class="ri-instagram-line"></i>
+            </a>
+        
+        <a href="https://www.facebook.com/share/16Rk6mxJTn/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+            <i class="ri-facebook-fill"></i>
+        </a>
+        
+        <a href="https://github.com/BALASURIYA-PERIYASAMY" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+        <i class="ri-github-fill"></i>
+        </a>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Balasuriya. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+</div>
+</div>
+<!-- Newsletter -->
+<div class="mt-10 bg-gray-800 p-6 rounded-lg">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6">
+<div>
+<h3 class="text-xl font-semibold mb-2">Subscribe to my newsletter</h3>
+<p class="text-gray-400">Get the latest updates on my projects and design tips.</p>
+</div>
+<div class="w-full md:w-auto">
+<form class="flex">
+<input type="email" placeholder="Your email address" class="px-4 py-3 bg-gray-700 border-none text-white rounded-l-button w-full focus:outline-none focus:ring-2 focus:ring-primary/20">
+<button type="submit" class="px-6 py-3 bg-primary text-white font-medium rounded-r-button whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- Back to Top Button -->
+<div class="fixed bottom-6 right-6 z-50">
+<a href="#" id="back-to-top" class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full shadow-lg opacity-0 invisible transition-all">
+<i class="ri-arrow-up-line ri-lg"></i>
+</a>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile Menu Toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenuButton.innerHTML = '<i class="ri-menu-line text-xl"></i>';
+} else {
+mobileMenuButton.innerHTML = '<i class="ri-close-line text-xl"></i>';
+}
+});
+// Close mobile menu when clicking on a link
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+mobileMenuButton.innerHTML = '<i class="ri-menu-line text-xl"></i>';
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Theme Toggle
+const themeToggles = document.querySelectorAll('.theme-toggle');
+themeToggles.forEach(toggle => {
+toggle.addEventListener('change', function() {
+const isChecked = this.checked;
+// Sync all toggles
+themeToggles.forEach(t => {
+t.checked = isChecked;
+});
+// Update toggle icons
+const toggleCircles = document.querySelectorAll('.toggle-circle');
+toggleCircles.forEach(circle => {
+if (isChecked) {
+circle.innerHTML = '<i class="ri-moon-line text-indigo-500 text-xs"></i>';
+} else {
+circle.innerHTML = '<i class="ri-sun-line text-yellow-500 text-xs"></i>';
+}
+});
+// Here you would implement actual theme switching logic
+// For demonstration, we'll just log it
+console.log('Theme changed to:', isChecked ? 'dark' : 'light');
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Portfolio Filtering
+const filterButtons = document.querySelectorAll('.portfolio-filter');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+filterButtons.forEach(button => {
+button.addEventListener('click', function() {
+const filterValue = this.getAttribute('data-filter');
+// Update active button
+filterButtons.forEach(btn => {
+btn.classList.remove('bg-primary', 'text-white');
+btn.classList.add('bg-gray-100', 'text-gray-700');
+});
+this.classList.remove('bg-gray-100', 'text-gray-700');
+this.classList.add('bg-primary', 'text-white');
+// Filter items
+portfolioItems.forEach(item => {
+const category = item.getAttribute('data-category');
+if (filterValue === 'all' || filterValue === category) {
+item.style.display = 'block';
+} else {
+item.style.display = 'none';
+}
+});
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Contact Form Submission
+const contactForm = document.getElementById('contact-form');
+const submitButton = document.getElementById('submit-button');
+const buttonText = document.getElementById('button-text');
+const buttonLoading = document.getElementById('button-loading');
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+// Show loading state
+buttonText.classList.add('hidden');
+buttonLoading.classList.remove('hidden');
+// Simulate form submission
+setTimeout(function() {
+// Hide loading state
+buttonText.classList.remove('hidden');
+buttonLoading.classList.add('hidden');
+// Show success message
+alert('Thank you for your message! I will get back to you soon.');
+// Reset form
+contactForm.reset();
+}, 1500);
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Back to Top Button
+const backToTopButton = document.getElementById('back-to-top');
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 300) {
+backToTopButton.classList.remove('opacity-0', 'invisible');
+backToTopButton.classList.add('opacity-100', 'visible');
+} else {
+backToTopButton.classList.remove('opacity-100', 'visible');
+backToTopButton.classList.add('opacity-0', 'invisible');
+}
+});
+backToTopButton.addEventListener('click', function(e) {
+e.preventDefault();
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+});
+</script>
+</body>
+</html>
